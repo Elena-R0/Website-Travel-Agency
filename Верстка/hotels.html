@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Travel</title>
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-1 col-2">
+                    <div class="header__hamburger">
+                        <svg class="bi bi-filter-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </div>
+                    <ul class="header__menu">
+                        <li class="dropdown">
+                            <a href="#">Страны</a>
+                            <ul class="dropdown__list">
+                                <li><a href="#">Америка</a></li>
+                                <li><a href="#">Азия</a></li>
+                                <li><a href="#">Африка</a></li>
+                                <li><a href="#">Австралия</a></li>
+                                <li><a href="#">Европа</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="hotels.html">Отели</a></li>
+                        <li class="dropdown">
+                            <a>Полезное</a>
+                            <ul class="dropdown__list">
+                                <li><a href="#">Покупка авиабилета</a></li>
+                                <li><a href="#">Покупка ЖД билета</a></li>
+                                <li><a href="#">Поиск туров</a></li>
+                                <li><a href="#">Прокат автомобилей</a></li>
+                                <li><a href="#">Страховка</a></li>
+                                <li><a href="#">Оформление загранпаспорта</a></li>
+                                <li><a href="#">Деньги</a></li>
+                                <li><a href="#">Карты</a></li>
+                                <li><a href="#">Медицина</a></li>
+                                <li><a href="#">Роуминг и интернет</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="">Куда поехать</a>
+                            <ul class="dropdown__list">
+                                <li><a href="#">Выбор места отдыха</a></li>
+                                <li><a href="#">Курорты мира</a></li>
+                                <li><a href="#">Острова</a></li>
+                                <li><a href="#">Горы</a></li>
+                                <li><a href="#">Города</a></li>
+                                <li><a href="#">Достопримечательности</a></li>
+                                <li><a href="#">Чудеса света</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="modal__contacts-trigger">Контакты</a></li>
+                        <li><a href="#" class="modal__login-trigger">Войти</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-7 col-sm-7 col-8 order-lg-first">
+                    <a href="index.html" class="header__logo-wrapper">
+                        <div class="header__logo">
+                            <img src="img/min/logo.png" alt="Логотип">
+                        </div>
+                        <div class="header__sitename">
+                            Big Travel
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-3 col-2 d-none d-sm-block">
+                    <div class="header__search">
+                        <input type="text" placeholder="Поиск...">
+                        <div class="header__search-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="our-services__title our-services__title--line">
+                        Выбор отеля
+                    </h2>
+                    <div class="filter__grid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="filter__select">
+                                    <option>Выберите страну</option>
+                                    <option>Америка</option>
+                                    <option>Азия</option>
+                                    <option>Африка</option>
+                                    <option>Австралия</option>
+                                    <option>Европа</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="filter__select">
+                                    <option>Выберите курорт</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="filter__select">
+                                    <option>Выберите район</option>
+                                   
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <ul class="filter__radio-list">
+                                    <li>
+                                        <input class="radio" id="rating_1" name="rating" type="radio">
+                                        <label for="rating_1">
+                                            5
+                                            <svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                                                fill="#E5A015" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input class="radio" id="rating_2" name="rating" type="radio">
+                                        <label for="rating_2">4
+                                            <svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                                                fill="#E5A015" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input class="radio" id="rating_3" name="rating" type="radio">
+                                        <label for="rating_3">3
+                                            <svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                                                fill="#E5A015" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input class="radio" id="rating_4" name="rating" type="radio">
+                                        <label for="rating_4">2
+                                            <svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                                                fill="#E5A015" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input class="radio" id="rating_5" name="rating" type="radio">
+                                        <label for="rating_5">1
+                                            <svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                                                fill="#E5A015" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="our-services__btn m-none mw-none">
+                                    Подобрать отели
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="our-services__title">
+                        Наиболее популярные предложения
+                    </h2>
+                    <div class="our-services__list">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="our-services__item">
+                                    <img src="img/min/hotel1.jpg" alt="название" class="image" tabindex="1" />
+                                    <h3>Baros Maldives</h3>
+                                    <p>
+                                        Главное отличие Baros Maldives в том, что он только для взрослых. Детей младше 8 лет здесь не принимают, ведь это место создано для отдыха в тишине. Здесь есть персональные бассейны, спа-центр и всё для водного спорта и снорклинга. Поселиться можно в
+                                        вилле на берегу среди пальм либо в воде на сваях.
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="our-services__item">
+                                    <img src="img/min/hotel2.jpg" alt="название" class="image" tabindex="1">
+                                    <h3>Mriya Resort & Spa</h3>
+                                    <p>
+                                        У отеля есть собственный пляж, дорога до которого занимает всего 5 минут. Любителям водных процедур придутся по вкусу крытый и открытый бассейны, спа-центр, сауна, хаммам и джакузи. В Mriya Resort & Spa можно не только отдохнуть, но и заняться здоровьем.
+                                        Комплекс оснащён всем необходимым оборудованием для диагностики и лечения.
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="our-services__item">
+                                    <img src="img/min/hotel3.jpg" alt="название" class="image" tabindex="1">
+                                    <h3>Peninsula</h3>
+                                    <p>
+                                        Отель находится в Париже, совсем рядом с Триумфальной аркой. В первую очередь Penisula — это роскошь и элегантность. Номера и холлы просторные, с высокими потолками и непременно украшены произведениями искусства. Многие считают Peninsula лучшим европейским
+                                        отелем.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="our-services__btn">
+                                    Забронируйте свою поездку
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-2 col-4">
+                    <ul class="footer__menu">
+                        <li><a href="hotels.html">Отели</a></li>
+                        <li><a href="#">Полезное</a></li>
+                        <li><a href="#">Страны</a></li>
+                        <li><a href="#">Куда поехать</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-7 col-4">
+                    <a href="index.html" class="header__logo-wrapper">
+                        <div class="header__logo">
+                            <img src="img/min/logo.png" alt="Логотип">
+                        </div>
+                        <div class="header__sitename">
+                            Big Travel
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-4">
+                    <div class="footer__contacts">
+                        Контакты <br> тел. 8(913)943-58-91
+                    </div>
+                    <div class="footer__social">
+                        <div class="vk">
+                            <img src="img/min/vk.jpg" alt="vk">
+                        </div>
+                        <div class="inst">
+                            <img src="img/min/inst.jpg" alt="inst">
+                        </div>
+                        <div class="tel">
+                            <img src="img/min/tel.jpg" alt="tel">
+                        </div>
+                        <div class="fb">
+                            <img src="img/min/facebook.jpg" alt="fb">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="menu-popup">
+        <a class="menu-close" href="#"><svg class="bi bi-x-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+          </svg></a>
+        <ul>
+            <li><a href="#">Страны</a></li>
+            <li><a href="hotels.html">Отели</a></li>
+            <li><a href="#">Полезное</a></li>
+            <li><a href="#">Куда поехать</a></li>
+            <li><a href="#" class="modal__contacts-trigger">Контакты</a></li>
+            <li><a href="#" class="modal__login-trigger">Войти</a></li>
+            <li>
+                <div class="header__search">
+                    <input type="text" placeholder="Поиск...">
+                    <div class="header__search-icon"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="modal__contacts">
+        <div class="modal__contacts-title">
+            Контакты
+        </div>
+        <div class="modal__contacts-body">
+            <p> тел. 8(913)943-58-91<br> Также мы есть в группе вк <br> и инстаграмме под названием <br>"Big Travel"
+            </p>
+            <a href="#" id="contacts-close" class="btn login-form__submit default-btn">ОК</a>
+        </div>
+    </div>
+
+    <div class="modal__login-form">
+        <form class="login-form__form">
+            <div class="login-form__enter">Вход в личный кабинет</div>
+            <div class="login-form__grid">
+                <label class=" input-wrapper login-form__input">
+                    <div class="form-group">
+                        <input class="input " type="text" autocomplete="off" data-test="input-field"
+                            placeholder="Имя пользователя" style="padding: 0 30px;" value="">
+                        <div class="input_icon input_icon--phone"></div>
+                    </div>
+                </label>
+                <label class=" input-wrapper login-form__input  ">
+                    <div class="form-group">
+                        <input class="input" type="password" autocomplete="off" placeholder="Пароль"
+                            style="padding: 0 30px;" data-test="input-field" value="">
+                        <div class="input_icon input_icon--pass"></div>
+                    </div>
+                </label>
+                <div class="login-form__link-wrapper">
+                    <a class="login-form__link" href="">
+                        <span>Зарегистрироваться</span>
+                    </a>
+                    <a class="login-form__link" href="">
+                        <span>Забыли пароль?</span>
+                    </a>
+                </div>
+                <button id="login-form__submit" class="btn login-form__submit default-btn ">Войти</button>
+            </div>
+        </form>
+    </div>
+    <div class="overflow"></div>
+    <div class="feedback">
+        Если у вас возникли какие-то вопросы по поездке, звоните нам по телефону: 8(913)943-58-91 Звонок платный.
+    </div>
+    <script src="js/index.js"></script>
+    </div>
+</body>
+
+</html>
